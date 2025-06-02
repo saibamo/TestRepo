@@ -2,9 +2,7 @@
 # Dieses Skript simuliert eine einfache E-Commerce-Anwendung mit mehreren Klassen, 
 # die miteinander interagieren, um Benutzer, Produkte, Lager, Bestellungen und Zahlungen zu verwalten.
 
-import logging
-import random
-import datetime
+import logging, random, datetime, subprocess
 from typing import List, Dict, Optional
 
 # 1. Logger-Klasse
@@ -106,6 +104,19 @@ class Inventory:
         else:
             self._logger.log_error(f"Attempted to restock unknown product ID {product_id}")
 
+    def _interact_with_inventory_legacy_system(self, product_id: str, quantity: int):
+        # Simuliert Interaktion mit einem Legacy-System (z.B. Datenbank)
+        # In einer echten Anwendung könnte dies eine API
+        # Example: simulate a legacy system update for inventory
+        command = f"echo 'Update inventory for {product_id} by {quantity}'"
+        result = self._run_command(command)
+        self._logger.log_info(f"Legacy system responded: {result.decode().strip()}")
+
+    def _run_command(self, command: str)-> bytes:
+        # Simuliert das Ausführen eines Kommandos (z.B. SQL-Query)
+        self._logger.log_info(f"Running command: {command}")
+        output = subprocess.check_output(command, shell=True, stderr=subprocess.STDOUT)
+        return output
 
 # 5. User-Klasse
 # Modelliert einen Kunden mit Bestellhistorie
