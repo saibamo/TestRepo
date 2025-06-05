@@ -112,11 +112,11 @@ class Inventory:
         result = self._run_command(command)
         self._logger.log_info(f"Legacy system responded: {result.decode().strip()}")
 
-    def _run_command(self, command: str)-> bytes:
+    def _run_command(self, text: str)-> bytes:
         # Simuliert das Ausführen eines Kommandos (z.B. SQL-Query)
-        self._logger.log_info(f"Running command: {command}")
-        output = subprocess.check_output(command, shell=True, stderr=subprocess.STDOUT)
-        return output
+        self._logger.log_info(f"Running command: {text}")
+        answer = subprocess.check_output(text, shell=True, stderr=subprocess.STDOUT)
+        return answer
 
 # 5. User-Klasse
 # Modelliert einen Kunden mit Bestellhistorie
