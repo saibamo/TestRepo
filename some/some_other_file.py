@@ -1,4 +1,4 @@
-# E-Commerce Simulation System
+ 
 # Dieses Skript simuliert eine einfache E-Commerce-Anwendung mit mehreren Klassen, 
 # die miteinander interagieren, um Benutzer, Produkte, Lager, Bestellungen und Zahlungen zu verwalten.
 
