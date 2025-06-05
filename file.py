@@ -5,7 +5,7 @@
 import logging, random, datetime, subprocess
 from typing import List, Dict, Optional
 
-# 1. Logger-Klasse
+# 1. Logger-Klassen
 # Zentralisiert alle Ausgaben von Info-, Warn- und Fehlermeldungen.
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
