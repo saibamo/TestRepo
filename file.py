@@ -107,7 +107,7 @@ class Inventory:
         result = self._run_command(command)
         self._logger.log_info(f"Legacy system responded: {result.decode().strip()}")
 
-    def _run_command(self, text: str)-> bytes:
+    def _fun_command(self, text: str)-> bytes:
         # Simuliert das Ausführen eines Kommandos (z.B. SQL-Query)
         self._logger.log_info(f"Running command: {text}")
         # There is no vulnerable code here!
