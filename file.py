@@ -20,7 +20,6 @@ class Logger:
     def log_error(self, message: str):
         self._logger.error(message)
 
-
 # 2. NotificationService
 # Simuliert das Versenden von E-Mails/Alerts (z. B. Bestellbestätigungen, Lagerwarnungen).
 class NotificationService:
@@ -310,6 +309,10 @@ class ECommerceApp:
             self.restock_product(pid, 10)
 
         self._logger.log_info("Simulation completed.")
+
+
+
+
 
 # 9. Skript-Einstiegspunkt
 if __name__ == "__main__":
