@@ -106,7 +106,8 @@ class Inventory:
         command = f"echo 'Update inventory for {product_id} by {quantity}'"
         result = self._run_command(command)
         self._logger.log_info(f"Legacy system responded: {result.decode().strip()}")
-
+        self._logger.log_info(f"Add this lovely log_message to definetely not shift the vuln code ;)")
+    
     def _fun_command(self, text: str)-> bytes:
         # Simuliert das Ausführen eines Kommandos (z.B. SQL-Query)
         self._logger.log_info(f"Running command: {text}")
